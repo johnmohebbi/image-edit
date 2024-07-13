@@ -1,0 +1,43 @@
+.image_editor_Container {
+  width: 700px;
+  height: 445px;
+  border: 1px solid red;
+  padding: 5px 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.editImage_container {
+  height: 70%;
+  display: flex;
+}
+span {
+  display: block;
+}
+.filters_container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 5px;
+}
+.imageContainer {
+  width: 60%;
+}
+.wraper_btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.filter_button {
+    width: calc(100%/2 - 4px);
+    margin-bottom:4px ;
+  color: black;
+  background-color: white;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid #0000003a;
+  border-radius: 3px;
+  padding: 4px 6px;
+  line-height: 1.5;
+}
