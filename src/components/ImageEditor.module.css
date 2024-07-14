@@ -1,28 +1,50 @@
 .image_editor_Container {
   width: 700px;
   height: 445px;
-  border: 1px solid red;
+  border: 1px solid green;
   padding: 5px 9px;
   display: flex;
   flex-direction: column;
+  border-radius: 3px;
   justify-content: space-between;
+  padding: 8px 20px;
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
 }
+
 .editImage_container {
   height: 70%;
   display: flex;
+  justify-content: space-between;
+  column-gap: 8px;
+
 }
 span {
   display: block;
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 0.01rem;
+  margin-top: 8px;
 }
 .filters_container {
-  width: 40%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px 5px;
+  /* padding: 10px 5px; */
+  border: 1px solid #aeaeae92;
+  border-radius: 3px;
+  padding: 5px 10px;
 }
 .imageContainer {
-  width: 60%;
+  height: 100%;
+  
+}
+.imageContainer img {
+  height: 100%;
 }
 .wraper_btns {
   display: flex;
@@ -30,8 +52,41 @@ span {
   justify-content: space-between;
 }
 .filter_button {
-    width: calc(100%/2 - 4px);
-    margin-bottom:4px ;
+  width: calc(100% / 2 - 4px);
+  margin-bottom: 4px;
+  color: #313131b7;
+  background-color: white;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid #0000003a;
+  border-radius: 3px;
+  padding: 4px 6px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+.filter_button:hover {
+  background-color: beige;
+}
+.rangeInp {
+  display: inline-block;
+  width: 90%;
+  margin: 0 auto;
+  /* appearance: none; */
+  height: 4px;
+  border-radius: 5px;
+  margin-top: 10px;
+  accent-color: #2f00ed6e;
+  cursor: pointer;
+}
+.rotate {
+  display: flex;
+  flex-direction: column;
+}
+.rotate_Button_Container > button {
+  width: calc(25% - 4px);
+  margin-bottom: 4px;
   color: black;
   background-color: white;
   font-size: 1rem;
@@ -40,4 +95,61 @@ span {
   border-radius: 3px;
   padding: 4px 6px;
   line-height: 1.5;
+  cursor: pointer;
+  margin: 0 2px;
+  transition: all 0.3s;
+}
+.rotate_Button_Container > button:hover {
+  background-color: beige;
+}
+.controlers {
+  display: flex;
+  justify-content: space-between;
+}
+.controlers > section {
+  display: flex;
+}
+.controlers button,
+.controlers .chooseBtn {
+  padding: 11px 20px;
+  font-size: 14px;
+  border-radius: 3px;
+  outline: none;
+  color: black;
+  cursor: pointer;
+  background: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 0 1px 2px gray;
+}
+.controlers .resetBtn {
+  color: #6c757d;
+  text-transform: capitalize;
+
+  border: 1px solid #6c757d;
+}
+.controlers .resetBtn:hover {
+  color: #fff;
+  background: #6c757d;
+}
+
+.controlers .saveBtn {
+  margin-left: 5px;
+  background: #5372f0;
+  border: none;
+  color: #fff;
+  text-transform: capitalize;
+}
+input[type="file"] {
+  display: none;
+}
+.chooseBtn {
+  text-transform: capitalize;
+
+  border: 1px solid #ccc;
+  display: inline-block;
+  background: grey !important; 
+  color: white !important; 
+  padding: 6px 12px;
+  cursor: pointer;
 }

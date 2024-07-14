@@ -6,28 +6,53 @@ function ImageEditor() {
       <h2>image edit</h2>
       <div className={styles.editImage_container}>
         <div className={styles.filters_container}>
+          <section>
             <span>Filters</span>
-          <div className={styles.wraper_btns}>
-            <button className={`${styles.filter_button} ${styles.Brightness}`}>
-              Brightness
-            </button>
-            <button className={`${styles.filter_button} ${styles.Saturation}`}>
-              Saturation
-            </button>
-            <button className={`${styles.filter_button} ${styles.Inversion}`}>
-              Inversion
-            </button>
-            <button className={`${styles.filter_button} ${styles.Grayscale}`}>
-              Grayscale
-            </button>
-            <input type="range" name="range" id="range" min={0} max={100} />
-          </div>
+            <div className={styles.wraper_btns}>
+              <button
+                className={`${styles.filter_button} ${styles.Brightness}`}
+              >
+                Brightness
+              </button>
+              <button
+                className={`${styles.filter_button} ${styles.Saturation}`}
+              >
+                Saturation
+              </button>
+              <button className={`${styles.filter_button} ${styles.Inversion}`}>
+                Inversion
+              </button>
+              <button className={`${styles.filter_button} ${styles.Grayscale}`}>
+                Grayscale
+              </button>
+              <span>Grayscale</span>
+              <span>100%</span>
+              <input
+                type="range"
+                name="range"
+                className={styles.rangeInp}
+                min={0}
+                max={100}
+              />
+            </div>
+          </section>
+
           <div className={styles.rotate}>
             <span>Rotate</span>
-            <button className={styles.left}>left</button>
-            <button className={styles.right}>right</button>
-            <button className={styles.horizontal}>horizontal</button>
-            <button className={styles.vertical}>horizontal</button>
+            <div className={styles.rotate_Button_Container}>
+              <button className={styles.left}>
+                <i className="fa-solid fa-rotate-left"></i>
+              </button>
+              <button className={styles.right}>
+                <i className="fa-solid fa-rotate-right"></i>
+              </button>
+              <button className={styles.horizontal}>
+                <i className="bx bx-reflect-vertical"></i>
+              </button>
+              <button className={styles.vertical}>
+                <i className="bx bx-reflect-horizontal"></i>
+              </button>
+            </div>
           </div>
         </div>
         <div className={styles.imageContainer}>
@@ -36,10 +61,20 @@ function ImageEditor() {
       </div>
       <div className={styles.controlers}>
         <button className={styles.resetBtn}>reset filters</button>
-        <form>
-          <input type="file" className={styles.uploadBtn} accept=".jpg,jpeg" />
-        </form>
-        <button className={styles.saveBtn}>save Image</button>
+        <section>
+          {" "}
+          <form>
+            <label htmlFor='photoUpload' className={styles.chooseBtn}>
+              upload file
+            </label>
+            <input
+              type="file"
+              id="photoUpload"
+              accept=".jpg,jpeg"
+            />
+          </form>
+          <button className={styles.saveBtn}>save Image</button>
+        </section>
       </div>
     </section>
   );
