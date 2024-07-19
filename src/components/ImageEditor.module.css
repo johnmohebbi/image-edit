@@ -43,6 +43,10 @@ span {
   pointer-events: none;
   
 }
+.filter_Active {
+  background-color: #36BA98 !important;
+  color: #FFFBF5 !important;
+}
 .imageContainer {
   width: 100%;
 
@@ -72,6 +76,11 @@ span {
   cursor: pointer;
   transition: all 0.3s;
   font-weight: 600;
+  /* user-select: none; */
+}
+.rangeValue {
+  width: 3ch;
+  text-align: center;
 }
 .filter_button:hover {
   background-color: beige;
