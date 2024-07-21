@@ -20,7 +20,6 @@
   display: flex;
   justify-content: space-between;
   column-gap: 8px;
-
 }
 span {
   display: block;
@@ -38,24 +37,22 @@ span {
   border-radius: 3px;
   padding: 5px 10px;
 }
-.filters_container.nonActive{
-  opacity: .5;
+.filters_container.nonActive {
+  opacity: 0.5;
   pointer-events: none;
-  
 }
 .filter_Active {
-  background-color: #36BA98 !important;
-  color: #FFFBF5 !important;
+  background-color: #36ba98 !important;
+  color: #fffbf5 !important;
 }
 .imageContainer {
   width: 100%;
-
 }
 .imageContainer img {
   width: 100%;
   height: 100%;
   object-fit: fill;
-  
+  transform: scaleX(1);
 }
 .wraper_btns {
   display: flex;
@@ -118,6 +115,11 @@ span {
 .rotate_Button_Container > button:hover {
   background-color: beige;
 }
+.rotate_Button_Container i {
+  pointer-events: none;
+}
+.left {
+}
 .controlers {
   display: flex;
   justify-content: space-between;
@@ -151,10 +153,14 @@ span {
 
 .controlers .saveBtn {
   margin-left: 5px;
-  background: #5372f0;
+  background: #f06353;
   border: none;
   color: #fff;
   text-transform: capitalize;
+}
+.saveBtn:disabled {
+  opacity: .5;
+  pointer-events: none;
 }
 input[type="file"] {
   display: none;
@@ -164,8 +170,13 @@ input[type="file"] {
 
   border: 1px solid #ccc;
   display: inline-block;
-  background: grey !important; 
-  color: white !important; 
+  background: grey !important;
+  color: white !important;
   padding: 6px 12px;
   cursor: pointer;
+}
+.image_canvas {
+  border: 1px solid red;
+  border-radius: 5px;
+  overflow: hidden;
 }
